@@ -1,0 +1,164 @@
+body{
+    background-color: #473f63;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 10px rgba(53, 14, 126, 0.5),
+        0 0 20px rgba(53, 14, 126, 0.5);
+}
+
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+.campo-texto {
+    width: 50%;
+    height: 45px;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(63, 59, 68, 0.05);
+}
+
+/* efeito quando clica no input */
+.campo-texto:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
+    background-color: #fff;
+}
+
+.salvar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background: #38214b;
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(104, 65, 122, 0.3);
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: #49269b;
+    margin: 30px 0;
+}
+
+.tabela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #332b3b;
+}
+
+table {
+    width: 85%;
+    border-collapse: collapse;
+    background-color: #403d49;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* cabeçalho */
+th {
+    background: linear-gradient(#5a4081);
+    color: #f5f5f5;
+
+    padding: 16px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* células */
+td {
+    padding: 14px;
+    color: #e5e7eb;
+    border-bottom: 1px solid #2b2438;
+    text-align: center;
+}
+
+/* linhas alternadas */
+tr:nth-child(even) {
+    background-color: #15111f;
+}
+
+/* hover nas linhas */
+tr:hover {
+    background-color: #241a33;
+    transition: 0.2s ease;
+}
+
+/* container dos botões */
+.update-delete {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* botões base */
+.acao {
+    width: 85px;
+    height: 32px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+    color: white;
+}
+
+/* botão update (roxo/azul escuro) */
+.acao:first-child {
+    background-color: #4c1d95;
+}
+
+.acao:first-child:hover {
+    background-color: #5b21b6;
+    transform: scale(1.05);
+}
+
+/* botão delete (vermelho escuro elegante) */
+.acao:last-child {
+    background-color: #7f1d1d;
+}
+
+.acao:last-child:hover {
+    background-color: #991b1b;
+    transform: scale(1.05);
+}
