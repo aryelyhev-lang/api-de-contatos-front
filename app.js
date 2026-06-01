@@ -84,7 +84,7 @@ async function carregarContatos() {
     contatos.forEach(criarLinha)
 }
 
-// função assíncrona responsável por salvar um novo contato
+// função responsável por salvar um novo contato
 async function salvarContato() {
 
     // cria um objeto chamado contato
@@ -108,6 +108,20 @@ async function salvarContato() {
     limparCampos()
 }
 
+function atualizarCampos(contato){
+    
+    const contato = {
+        
+        nome: document.getElementById('nome').value,            // pega o valor do input com id "nome"
+        email: document.getElementById('email').value,          // pega o valor do input com id "email"
+        endereco: document.getElementById('endereco').value,    // pega o valor do input com id "endereco"
+        cidade: document.getElementById('cidade').value         // pega o valor do input com id "cidade"
+    }
+
+    const atualizaContato = putContato(contato)
+
+}
+
 // função responsável por limpar os campos do formulário
 function limparCampos() {
    
@@ -117,9 +131,13 @@ function limparCampos() {
     document.getElementById('cidade').value = ''    // limpa o campo de cidade
 }
 
+
 // adiciona um evento de clique no botão salvar
 // quando o botão for clicado, chama a função salvarContato
 botaoSalvar.addEventListener('click', salvarContato)
+botaoAtualizar.addEventListener('click', atualizarCampos)
+botaoExcluir.addEventListener('click', limparCampos)
+
 
 
 // inicia a aplicação chamando a função que carrega os contatos da API
